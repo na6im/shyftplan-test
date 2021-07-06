@@ -1,0 +1,36 @@
+{
+  "env": {
+    "browser": true,
+    "es2021": true
+  },
+  "extends": [
+    "plugin:react/recommended",
+    "airbnb",
+    "prettier",
+    "plugin:import/typescript"
+  ],
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "plugins": [
+    "react",
+    "@typescript-eslint",
+    "jest"
+  ],
+  "rules": {
+    "react/jsx-filename-extension": [2, { "extensions": [".js", ".jsx", ".ts", ".tsx"]}],
+    "import/extensions": "off",
+    "react/jsx-props-no-spreading": "off",
+    "no-plusplus": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "react/prop-types": "off",
+    "camelcase": "off",
+    "prefer-template": "off",
+    "react/react-in-jsx-scope": "off"
+  }
+}
