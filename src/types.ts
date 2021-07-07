@@ -16,3 +16,17 @@ export interface Pagination {
   limit: number;
   offset: number;
 }
+
+export interface Employee {
+  firstName: string;
+  lastName: string;
+  image: string;
+}
+
+export interface EventDetail {
+  endsAt: Date;
+  id: number;
+  startsAt: Date;
+  position: Position;
+  employees: Employee[];
+}
