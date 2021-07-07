@@ -1,14 +1,20 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
-export const CardContainer = styled.div`
-    height: 100px;
-    width: auto;
-  border: 1px solid lightgrey;
-`
-export const CardContent = styled.div`
+const CardContent = styled.div`
   padding: 1em;
-  height: 100px;
+  height: fit-content;
+  width: 30%;
   display: flex;
-  flex: 0;
   flex-direction: column;
-`
+  border-radius: 8px;
+  border: 1px solid lightgrey;
+  margin: 0.5em;
+  transition: all 500ms ease;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.02);
+  }
+`;
+
+export default CardContent

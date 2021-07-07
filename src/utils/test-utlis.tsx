@@ -13,9 +13,7 @@ const queryClient = new QueryClient();
 function renderWithTheme(ui: React.ReactElement) {
   const Wrapper = ({ children }: AuxProps) => (
     <QueryClientProvider client={queryClient}>
-      <ToastProvider>
-        {children}
-      </ToastProvider>
+      <ToastProvider>{children}</ToastProvider>
     </QueryClientProvider>
   );
   return {

@@ -1,39 +1,27 @@
 import React from 'react';
-import { CardContainer, CardContent } from './styles'
+import CardContent from './styles';
+import { Event } from '../../types';
 
-interface Position {
-    color: string,
-    id: number,
-    name: string
-}
+const EventCard: React.FC<{ eventElement: Event }> = ({ eventElement }) => (
+    <CardContent>
+      <div>
+        <b>Name: </b> {eventElement.position?.name}
+      </div>
+      <div>
+        <b>Starts at: </b>
+        {new Date(eventElement?.startsAt).toLocaleString('fr', {
+          dateStyle: 'short',
+          timeStyle: 'short',
+        })}
+      </div>
+      <div>
+        <b>Ends at: </b>
+        {new Date(eventElement?.endsAt).toLocaleString('fr', {
+          dateStyle: 'short',
+          timeStyle: 'short',
+        })}
+      </div>
+    </CardContent>
+);
 
-interface Event {
-    endsAt: Date,
-    id: number,
-    startsAt: Date
-    position: Position
-}
-
-const EventCard: React.FC<{ eventElement: Event }> = ({eventElement}) => (
-        <CardContainer>
-            <CardContent>
-                <div><b>Name: </b> {eventElement.position?.name}</div>
-                <div><b>Starts at: </b>{new Date(eventElement?.startsAt).toLocaleString(
-                    'fr',
-                    {
-                        dateStyle: 'short',
-                        timeStyle: 'short',
-                    }
-                )}</div>
-                <div><b>Ends at: </b>{new Date(eventElement?.endsAt).toLocaleString(
-                    'fr',
-                    {
-                        dateStyle: 'short',
-                        timeStyle: 'short',
-                    }
-                )}</div>
-            </CardContent>
-        </CardContainer>
-    )
-
-export default EventCard
+export default EventCard;
