@@ -51,6 +51,7 @@ const EventsScreen: React.FC<RouteComponentProps> = () => {
     }
   );
 
+
   useEffect(() => {
     refetch();
   }, [startsAt, endsAt]);
@@ -62,14 +63,14 @@ const EventsScreen: React.FC<RouteComponentProps> = () => {
 
   if (isLoading)
     return (
-      <LoaderContainer>
+      <LoaderContainer data-testid="isLoading">
         <Loader src={logo} />
       </LoaderContainer>
     );
   if (isError) return <LoaderContainer>Error</LoaderContainer>;
 
   return (
-    <AppContainer>
+    <AppContainer data-testid="container">
       <FiltersContainer>
         <Filter>
           <div>
@@ -93,7 +94,7 @@ const EventsScreen: React.FC<RouteComponentProps> = () => {
         </Filter>
         <ResetButton onClick={resetFilter}> Reset </ResetButton>
       </FiltersContainer>
-      <EventsContainer>
+      <EventsContainer data-testid="events">
         {data?.pages?.map((group: any) =>
           group.items?.map((event: Event) => (
             <EventCard eventElement={event} key={event.id} />
@@ -105,8 +106,7 @@ const EventsScreen: React.FC<RouteComponentProps> = () => {
           disabled={isFetchingNextPage}
           onClick={() => fetchNextPage()}
         >
-          {' '}
-          {isFetchingNextPage ? 'Loading...' : 'Load More'}{' '}
+          {isFetchingNextPage ? 'Loading...' : 'Load More'}
         </LoadMoreButton>
       )}
     </AppContainer>

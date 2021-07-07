@@ -1,0 +1,312 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<EventsScreen /> Should renderWithQuery and match the snapshot 1`] = `
+<div
+  class="sc-gtsrHT cVmcJU"
+  data-testid="container"
+>
+  <div
+    class="sc-jSFjdj inWfdf"
+  >
+    <div
+      class="sc-gKAaRy kbMeAs"
+    >
+      <div>
+        <b>
+          Starts At: 
+        </b>
+      </div>
+      <div
+        class="react-datepicker-wrapper"
+      >
+        <div
+          class="react-datepicker__input-container"
+        >
+          <input
+            class=""
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <div
+      class="sc-gKAaRy kbMeAs"
+    >
+      <div>
+        <b>
+          Ends At: 
+        </b>
+      </div>
+      <div
+        class="react-datepicker-wrapper"
+      >
+        <div
+          class="react-datepicker__input-container"
+        >
+          <input
+            class=""
+            type="text"
+            value=""
+          />
+        </div>
+      </div>
+    </div>
+    <button
+      class="sc-iCoGMd josGzm"
+    >
+       Reset 
+    </button>
+  </div>
+  <div
+    class="sc-dlnjwi foLcUm"
+    data-testid="events"
+  >
+    <div
+      class="sc-bdnxRM cKHSxd"
+      data-testid="event"
+    >
+      <div>
+        <b>
+          Name: 
+        </b>
+         
+        Books
+      </div>
+      <div>
+        <b>
+          Starts at: 
+        </b>
+        8/1/20, 7:00 AM
+      </div>
+      <div>
+        <b>
+          Ends at: 
+        </b>
+        8/1/20, 12:00 PM
+      </div>
+    </div>
+    <div
+      class="sc-bdnxRM cKHSxd"
+      data-testid="event"
+    >
+      <div>
+        <b>
+          Name: 
+        </b>
+         
+        Health
+      </div>
+      <div>
+        <b>
+          Starts at: 
+        </b>
+        9/10/20, 7:00 AM
+      </div>
+      <div>
+        <b>
+          Ends at: 
+        </b>
+        9/10/20, 3:00 PM
+      </div>
+    </div>
+    <div
+      class="sc-bdnxRM cKHSxd"
+      data-testid="event"
+    >
+      <div>
+        <b>
+          Name: 
+        </b>
+         
+        Sports
+      </div>
+      <div>
+        <b>
+          Starts at: 
+        </b>
+        12/24/20, 11:00 AM
+      </div>
+      <div>
+        <b>
+          Ends at: 
+        </b>
+        12/24/20, 7:00 PM
+      </div>
+    </div>
+    <div
+      class="sc-bdnxRM cKHSxd"
+      data-testid="event"
+    >
+      <div>
+        <b>
+          Name: 
+        </b>
+         
+        Sports
+      </div>
+      <div>
+        <b>
+          Starts at: 
+        </b>
+        6/9/20, 10:00 AM
+      </div>
+      <div>
+        <b>
+          Ends at: 
+        </b>
+        6/9/20, 2:00 PM
+      </div>
+    </div>
+    <div
+      class="sc-bdnxRM cKHSxd"
+      data-testid="event"
+    >
+      <div>
+        <b>
+          Name: 
+        </b>
+         
+        Books
+      </div>
+      <div>
+        <b>
+          Starts at: 
+        </b>
+        4/22/20, 8:00 AM
+      </div>
+      <div>
+        <b>
+          Ends at: 
+        </b>
+        4/22/20, 2:00 PM
+      </div>
+    </div>
+    <div
+      class="sc-bdnxRM cKHSxd"
+      data-testid="event"
+    >
+      <div>
+        <b>
+          Name: 
+        </b>
+         
+        Health
+      </div>
+      <div>
+        <b>
+          Starts at: 
+        </b>
+        1/24/20, 11:00 AM
+      </div>
+      <div>
+        <b>
+          Ends at: 
+        </b>
+        1/24/20, 4:00 PM
+      </div>
+    </div>
+    <div
+      class="sc-bdnxRM cKHSxd"
+      data-testid="event"
+    >
+      <div>
+        <b>
+          Name: 
+        </b>
+         
+        Sports
+      </div>
+      <div>
+        <b>
+          Starts at: 
+        </b>
+        10/6/20, 8:00 AM
+      </div>
+      <div>
+        <b>
+          Ends at: 
+        </b>
+        10/6/20, 2:00 PM
+      </div>
+    </div>
+    <div
+      class="sc-bdnxRM cKHSxd"
+      data-testid="event"
+    >
+      <div>
+        <b>
+          Name: 
+        </b>
+         
+        Sports
+      </div>
+      <div>
+        <b>
+          Starts at: 
+        </b>
+        7/14/20, 11:00 AM
+      </div>
+      <div>
+        <b>
+          Ends at: 
+        </b>
+        7/14/20, 3:00 PM
+      </div>
+    </div>
+    <div
+      class="sc-bdnxRM cKHSxd"
+      data-testid="event"
+    >
+      <div>
+        <b>
+          Name: 
+        </b>
+         
+        Sports
+      </div>
+      <div>
+        <b>
+          Starts at: 
+        </b>
+        11/10/20, 8:00 AM
+      </div>
+      <div>
+        <b>
+          Ends at: 
+        </b>
+        11/10/20, 2:00 PM
+      </div>
+    </div>
+    <div
+      class="sc-bdnxRM cKHSxd"
+      data-testid="event"
+    >
+      <div>
+        <b>
+          Name: 
+        </b>
+         
+        Sports
+      </div>
+      <div>
+        <b>
+          Starts at: 
+        </b>
+        2/5/20, 7:00 AM
+      </div>
+      <div>
+        <b>
+          Ends at: 
+        </b>
+        2/5/20, 2:00 PM
+      </div>
+    </div>
+  </div>
+  <button
+    class="sc-hKFxyN ehhQQQ"
+  >
+    Load More
+  </button>
+</div>
+`;

@@ -127,7 +127,7 @@ export const eventsDataNoMore = {
       endsAt: '2020-02-05T13:00:00.000Z',
     },
   ],
-  pagination: { offset: 0, limit: 10, count: 10 },
+  pagination: { offset: 0, limit: 10, count: 9 },
 };
 
 export const EventDetails = {

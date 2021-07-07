@@ -1,11 +1,8 @@
 import React from 'react';
-import axios from 'axios';
 import { renderWithQuery, cleanup, screen } from '../../../utils/test-utlis';
 import DetailsView from '../index';
 import { EventDetails } from '../../../__mocks__/mockedData';
-
-jest.mock('axios');
-const mockedAxios = axios as jest.Mocked<typeof axios>;
+import mockedAxios from '../../../__mocks__/axios';
 
 beforeEach(cleanup);
 describe('<DetailsView />', () => {
