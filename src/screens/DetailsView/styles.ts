@@ -8,7 +8,7 @@ export const DetailsContainer = styled.div`
 `;
 
 export const EventDetails = styled.div`
-  width: 100%;
+  width: 400px;
   display: flex;
   align-items: flex-start;
   flex-direction: column;
@@ -16,7 +16,7 @@ export const EventDetails = styled.div`
 `;
 
 export const EmployeesDetails = styled.div`
-  width: 100%;
+  width: 200px;
   display: flex;
   flex-direction: column;
   margin: 10px;
@@ -42,3 +42,24 @@ export const NotFound = styled.img`
   align-items: center;
   flex-direction: row;
 `;
+
+export const GoBackButton = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  width: fit-content;
+  cursor: pointer;
+  border-radius: 8px;
+  padding: 5px 10px 5px 5px;
+  background-color: rgb(67, 135, 45);
+  color: white;
+  border: none;
+  margin: 10px;
+  
+  img {
+    height: 15px;
+    margin-right: 5px;
+  }
+`;
+

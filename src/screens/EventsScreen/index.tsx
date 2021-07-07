@@ -12,7 +12,8 @@ import {
   LoaderContainer,
   EventsContainer,
   FiltersContainer,
-  Filter
+  Filter,
+    ResetButton
 } from './styles';
 import Loader from '../../components/Loader/Loader';
 import logo from '../../assets/logo-only.png';
@@ -25,6 +26,7 @@ interface Request {
 const EventsScreen: React.FC<RouteComponentProps> = () => {
   const [startsAt, setStartsAt] = useState(null);
   const [endsAt, setEndsAt] = useState(null);
+
   const {
     isLoading,
     isError,
@@ -53,6 +55,10 @@ const EventsScreen: React.FC<RouteComponentProps> = () => {
     refetch()
   }, [startsAt, endsAt]);
 
+  const resetFilter = () => {
+    setStartsAt(null)
+    setEndsAt(null)
+  }
 
   if (isLoading)
     return (
@@ -81,6 +87,7 @@ const EventsScreen: React.FC<RouteComponentProps> = () => {
             onChange={setEndsAt}
         />
       </Filter>
+        <ResetButton onClick={resetFilter}> Reset </ResetButton>
       </FiltersContainer>
       <EventsContainer>
         {data?.pages?.map((group: any) =>

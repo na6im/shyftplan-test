@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const AppContainer = styled.div`
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -22,7 +22,7 @@ export const LoadMoreButton = styled.button`
   background-color: rgb(67, 135, 45);
   color: white;
   font-weight: bold;
-
+  border: none;
   &:hover {
     transform: scale(1.1);
   }
@@ -43,9 +43,28 @@ export const LoaderContainer = styled.div`
 export const FiltersContainer = styled.div`
     display: flex;
     flex-direction: row;
+  align-items: center;
 `
 export const Filter = styled.div`
   display: flex;
   flex-direction: row;
   margin-right: 10px;
+`
+
+export const ResetButton = styled.button`
+  cursor: pointer;
+  padding: 5px 20px;
+  margin: auto;
+  transition: all 500ms ease;
+  border-radius: 5px;
+  background-color: rgb(67, 135, 45);
+  color: white;
+  font-weight: bold;
+
+  &:hover {
+    transform: scale(1.1);
+  }
+  &:active {
+    transform: scale(1.05);
+  }
 `
