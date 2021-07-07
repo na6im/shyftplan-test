@@ -1,7 +1,6 @@
 // test-utils.js
 import React, { ComponentType, ReactChild, ReactChildren } from 'react';
 import { render } from '@testing-library/react';
-import { ToastProvider } from 'react-toast-notifications';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 interface AuxProps {
@@ -10,11 +9,9 @@ interface AuxProps {
 
 const queryClient = new QueryClient();
 
-function renderWithTheme(ui: React.ReactElement) {
+function renderWithQuery(ui: React.ReactElement) {
   const Wrapper = ({ children }: AuxProps) => (
-    <QueryClientProvider client={queryClient}>
-      <ToastProvider>{children}</ToastProvider>
-    </QueryClientProvider>
+    <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
   );
   return {
     ...render(ui, { wrapper: Wrapper as ComponentType }),
@@ -25,4 +22,4 @@ function renderWithTheme(ui: React.ReactElement) {
 
 export * from '@testing-library/react';
 
-export { renderWithTheme };
+export { renderWithQuery };

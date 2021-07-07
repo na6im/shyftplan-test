@@ -1,10 +1,12 @@
 import api from './api';
-import {eventsData, EventDetails} from "./mockedData";
-import mockedAxios from "./__mocks__/axios";
+import { eventsData, EventDetails } from './__mocks__/mockedData';
+import mockedAxios from './__mocks__/axios';
 
 describe('getEvents', () => {
   it('fetches successfully data from an API', async () => {
-    mockedAxios.get.mockImplementationOnce(() => Promise.resolve({data: eventsData}));
+    mockedAxios.get.mockImplementationOnce(() =>
+      Promise.resolve({ data: eventsData })
+    );
     const events = await api.getEvents(10, 0, {});
     await expect(events).toEqual(eventsData);
     expect(mockedAxios.get).toHaveBeenCalledTimes(1);
@@ -21,13 +23,13 @@ describe('getEvents', () => {
 
 describe('getEvent', () => {
   it('fetches successfully data from an API', async () => {
-    mockedAxios.get.mockImplementationOnce(() => Promise.resolve({ data: EventDetails }));
+    mockedAxios.get.mockImplementationOnce(() =>
+      Promise.resolve({ data: EventDetails })
+    );
     const blocks = await api.getEvent('12');
     await expect(blocks).toEqual(EventDetails);
     expect(mockedAxios.get).toHaveBeenCalledTimes(1);
-    expect(mockedAxios.get).toBeCalledWith(
-      '/events/12'
-    );
+    expect(mockedAxios.get).toBeCalledWith('/events/12');
   });
 
   it('should return error when request fails', async () => {

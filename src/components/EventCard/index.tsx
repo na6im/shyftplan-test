@@ -7,6 +7,7 @@ const EventCard: React.FC<{ eventElement: Event }> = ({ eventElement }) => {
   const history = useHistory();
   return (
     <CardContent
+      data-testid="event"
       onClick={() => {
         history.push(`/details/${eventElement.id}`);
       }}

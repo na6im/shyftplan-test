@@ -35,7 +35,7 @@ const DetailsView: React.FC<RouteComponentProps<MatchParams>> = ({
 
   if (isLoading)
     return (
-      <LoaderContainer>
+      <LoaderContainer data-testid="isLoading">
         <Loader src={logo} />
       </LoaderContainer>
     );
@@ -53,7 +53,7 @@ const DetailsView: React.FC<RouteComponentProps<MatchParams>> = ({
     );
 
   return (
-    <DetailsContainer>
+    <DetailsContainer data-testid="container">
       <GoBackButton
         onClick={() => {
           history.goBack();
@@ -84,7 +84,7 @@ const DetailsView: React.FC<RouteComponentProps<MatchParams>> = ({
       <EmployeesDetails>
         <b>Employees</b>
         {data?.employees?.map(({ firstName, lastName, image }) => (
-          <EmployeeInfo>
+          <EmployeeInfo data-testid="employee">
             <img src={image} alt={firstName + lastName} /> {firstName}{' '}
             {lastName}
           </EmployeeInfo>

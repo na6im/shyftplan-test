@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<DetailsView /> Should renderWithQuery and match the snapshot 1`] = `
+<div
+  class="sc-jrsJWt hWrfMW"
+  data-testid="isLoading"
+>
+  <img
+    class="sc-gKAaRy bVYUDA"
+    src="logo-only.png"
+  />
+</div>
+`;
+
+exports[`<DetailsView /> Should renderWithQuery and match the snapshot 2`] = `
+<div
+  class="sc-bdnxRM eKZVji"
+  data-testid="container"
+>
+  <button
+    class="sc-jSFjdj dgEvJT"
+  >
+    <img
+      alt="back-button"
+      src="backIcon.svg"
+    />
+    Go back
+  </button>
+  <div
+    class="sc-gtsrHT kzWqUm"
+  >
+    <div>
+      <b>
+        Name: 
+      </b>
+       
+      Sports
+    </div>
+    <div>
+      <b>
+        Starts at: 
+      </b>
+      09/06/2020 10:00
+    </div>
+    <div>
+      <b>
+        Ends at: 
+      </b>
+      09/06/2020 14:00
+    </div>
+  </div>
+  <div
+    class="sc-dlnjwi fpwCtT"
+  >
+    <b>
+      Employees
+    </b>
+    <div
+      class="sc-hKFxyN hoMlYs"
+      data-testid="employee"
+    >
+      <img
+        alt="BettyeMann"
+        src="https://cdn.fakercloud.com/avatars/vivekprvr_128.jpg"
+      />
+       
+      Bettye
+       
+      Mann
+    </div>
+  </div>
+</div>
+`;
