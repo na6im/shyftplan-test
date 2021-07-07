@@ -15,14 +15,16 @@ const instance = axios.create({
   },
 });
 
-const getEvents = async (limit: number, offset: number, args: any) => {
-  const { pageParam = 0 } = args
-  const response = await instance.get(EVENTS, { params: { limit, offset: pageParam } });
+const getEvents = async (limit: number, offset: number, args: any, startsAt?: Date | null, endsAt?: Date | null,) => {
+  const { pageParam = 0 } = args;
+  const response = await instance.get(EVENTS, {
+    params: { limit, offset: pageParam, startsAt, endsAt },
+  });
   return response.data;
 };
 
-const getEvent = async () => {
-  const response = await instance.get(EVENTS);
+const getEvent = async (id: string) => {
+  const response = await instance.get(EVENTS + `/${id}`);
   return response.data;
 };
 

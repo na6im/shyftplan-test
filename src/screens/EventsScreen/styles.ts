@@ -1,17 +1,17 @@
-import styled from "styled-components";
+import styled from 'styled-components';
 
 export const AppContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: center;
   flex-direction: column;
-  margin: 2em
-`
+  margin: 2em;
+`;
 export const EventsContainer = styled.div`
   display: flex;
   width: 100%;
   flex-flow: row wrap;
-`
+`;
 
 export const LoadMoreButton = styled.button`
   cursor: pointer;
@@ -29,8 +29,7 @@ export const LoadMoreButton = styled.button`
   &:active {
     transform: scale(1.05);
   }
-`
-
+`;
 
 export const LoaderContainer = styled.div`
   height: 100vh;
@@ -38,4 +37,15 @@ export const LoaderContainer = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
+  flex-direction: column;
+`;
+
+export const FiltersContainer = styled.div`
+    display: flex;
+    flex-direction: row;
+`
+export const Filter = styled.div`
+  display: flex;
+  flex-direction: row;
+  margin-right: 10px;
 `
