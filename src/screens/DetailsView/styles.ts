@@ -56,10 +56,9 @@ export const GoBackButton = styled.button`
   color: white;
   border: none;
   margin: 10px;
-  
+
   img {
     height: 15px;
     margin-right: 5px;
   }
 `;
-

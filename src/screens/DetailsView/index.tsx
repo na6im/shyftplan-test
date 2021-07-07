@@ -1,5 +1,5 @@
 import React from 'react';
-import {RouteComponentProps, useHistory} from 'react-router-dom';
+import { RouteComponentProps, useHistory } from 'react-router-dom';
 import { useQuery } from 'react-query';
 import { AxiosError } from 'axios';
 import api from '../../api';
@@ -9,7 +9,7 @@ import {
   EmployeesDetails,
   EmployeeInfo,
   NotFound,
-  GoBackButton
+  GoBackButton,
 } from './styles';
 import Loader from '../../components/Loader/Loader';
 import { LoaderContainer } from '../EventsScreen/styles';
@@ -54,8 +54,12 @@ const DetailsView: React.FC<RouteComponentProps<MatchParams>> = ({
 
   return (
     <DetailsContainer>
-      <GoBackButton onClick={()=>{history.goBack()}}>
-        <img src={back} alt='back-button'/>
+      <GoBackButton
+        onClick={() => {
+          history.goBack();
+        }}
+      >
+        <img src={back} alt="back-button" />
         Go back
       </GoBackButton>
       <EventDetails>

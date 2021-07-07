@@ -1,24 +1,12 @@
-import axios from 'axios';
-
 import api from './api';
+import {eventsData, EventDetails} from "./mockedData";
+import mockedAxios from "./__mocks__/axios";
 
-jest.mock('axios');
-const mockedAxios = axios as jest.Mocked<typeof axios>;
-
-describe('getBlocks', () => {
+describe('getEvents', () => {
   it('fetches successfully data from an API', async () => {
-    const response = {
-      data: [
-        { height: '123', time: new Date(), hash: 'hash' },
-        { height: '123', time: new Date(), hash: 'hash' },
-        { height: '123', time: new Date(), hash: 'hash' },
-        { height: '123', time: new Date(), hash: 'hash' },
-      ],
-    };
-
-    mockedAxios.get.mockImplementationOnce(() => Promise.resolve(response));
-    const blocks = await api.getBlocks();
-    await expect(blocks).toEqual(response.data);
+    mockedAxios.get.mockImplementationOnce(() => Promise.resolve({data: eventsData}));
+    const events = await api.getEvents(10, 0, {});
+    await expect(events).toEqual(eventsData);
     expect(mockedAxios.get).toHaveBeenCalledTimes(1);
   });
 
@@ -27,22 +15,18 @@ describe('getBlocks', () => {
       Promise.reject(new Error('error'))
     );
 
-    await expect(api.getBlocks()).rejects.toThrow('error');
+    await expect(api.getEvents(10, 0, {})).rejects.toThrow('error');
   });
 });
 
-describe('getDetail', () => {
+describe('getEvent', () => {
   it('fetches successfully data from an API', async () => {
-    const response = {
-      data: [{ size: '123', prev_block: new Date(), hash: 'hash' }],
-    };
-
-    mockedAxios.get.mockImplementationOnce(() => Promise.resolve(response));
-    const blocks = await api.getDetail('hash');
-    await expect(blocks).toEqual(response.data);
+    mockedAxios.get.mockImplementationOnce(() => Promise.resolve({ data: EventDetails }));
+    const blocks = await api.getEvent('12');
+    await expect(blocks).toEqual(EventDetails);
     expect(mockedAxios.get).toHaveBeenCalledTimes(1);
     expect(mockedAxios.get).toBeCalledWith(
-      'http://localhost:4000/api/blocks/hash'
+      '/events/12'
     );
   });
 
@@ -51,6 +35,6 @@ describe('getDetail', () => {
       Promise.reject(new Error('error'))
     );
 
-    await expect(api.getDetail('hash')).rejects.toThrow('error');
+    await expect(api.getEvent('hash')).rejects.toThrow('error');
   });
 });

@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useInfiniteQuery } from 'react-query';
 import { RouteComponentProps } from 'react-router-dom';
 // @ts-ignore
-import DatePicker from "react-datepicker";
+import DatePicker from 'react-datepicker';
 import api from '../../api';
 import EventCard from '../../components/EventCard';
 import { Event, Pagination } from '../../types';
@@ -13,11 +13,11 @@ import {
   EventsContainer,
   FiltersContainer,
   Filter,
-    ResetButton
+  ResetButton,
 } from './styles';
 import Loader from '../../components/Loader/Loader';
 import logo from '../../assets/logo-only.png';
-import "react-datepicker/dist/react-datepicker.css";
+import 'react-datepicker/dist/react-datepicker.css';
 
 interface Request {
   pagination: Pagination;
@@ -34,7 +34,7 @@ const EventsScreen: React.FC<RouteComponentProps> = () => {
     hasNextPage,
     fetchNextPage,
     isFetchingNextPage,
-    refetch
+    refetch,
   } = useInfiniteQuery<Request>(
     'Events',
     (args) => api.getEvents(10, 0, args, startsAt, endsAt),
@@ -52,13 +52,13 @@ const EventsScreen: React.FC<RouteComponentProps> = () => {
   );
 
   useEffect(() => {
-    refetch()
+    refetch();
   }, [startsAt, endsAt]);
 
   const resetFilter = () => {
-    setStartsAt(null)
-    setEndsAt(null)
-  }
+    setStartsAt(null);
+    setEndsAt(null);
+  };
 
   if (isLoading)
     return (
@@ -71,22 +71,26 @@ const EventsScreen: React.FC<RouteComponentProps> = () => {
   return (
     <AppContainer>
       <FiltersContainer>
-      <Filter>
-        <div><b>Starts At: </b></div>
-        <DatePicker
+        <Filter>
+          <div>
+            <b>Starts At: </b>
+          </div>
+          <DatePicker
             selected={startsAt}
             onSelect={setStartsAt}
             onChange={setStartsAt}
-        />
-      </Filter>
-      <Filter>
-        <div><b>Ends At: </b></div>
-        <DatePicker
+          />
+        </Filter>
+        <Filter>
+          <div>
+            <b>Ends At: </b>
+          </div>
+          <DatePicker
             selected={endsAt}
             onSelect={setEndsAt}
             onChange={setEndsAt}
-        />
-      </Filter>
+          />
+        </Filter>
         <ResetButton onClick={resetFilter}> Reset </ResetButton>
       </FiltersContainer>
       <EventsContainer>

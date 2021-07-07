@@ -41,15 +41,15 @@ export const LoaderContainer = styled.div`
 `;
 
 export const FiltersContainer = styled.div`
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-`
+`;
 export const Filter = styled.div`
   display: flex;
   flex-direction: row;
   margin-right: 10px;
-`
+`;
 
 export const ResetButton = styled.button`
   cursor: pointer;
@@ -67,4 +67,4 @@ export const ResetButton = styled.button`
   &:active {
     transform: scale(1.05);
   }
-`
+`;

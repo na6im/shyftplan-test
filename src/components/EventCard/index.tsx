@@ -16,14 +16,14 @@ const EventCard: React.FC<{ eventElement: Event }> = ({ eventElement }) => {
       </div>
       <div>
         <b>Starts at: </b>
-        {new Date(eventElement?.startsAt).toLocaleString('fr', {
+        {new Date(eventElement?.startsAt).toLocaleString('en', {
           dateStyle: 'short',
           timeStyle: 'short',
         })}
       </div>
       <div>
         <b>Ends at: </b>
-        {new Date(eventElement?.endsAt).toLocaleString('fr', {
+        {new Date(eventElement?.endsAt).toLocaleString('en', {
           dateStyle: 'short',
           timeStyle: 'short',
         })}
